@@ -1,0 +1,313 @@
+@CHARSET "UTF-8";
+.content{
+	background: #f5f5f5;
+	padding: 2em 0 2em;
+	font-family: "SimHei";
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.container{
+	min-width: 900px!important;
+}
+.nav-guide{
+	margin: 0 0 1em;
+}
+.nav-guide,.nav-guide a{
+	color: #999;
+}
+
+/*
+	购物车
+*/
+.car-box{
+	border: 1px solid #e7e7e7;
+}
+.car-title{
+	width: 100%;
+	height: 40px;
+	background: #f5f5f5;
+}
+.item-single, .item-list{
+	transition: 0.35s all ease-in;
+}
+.car-title  > div, .item-single > div{
+	width: 12%;
+	float: left;
+	text-align: center;
+}
+.car-title  > div{
+	line-height: 40px;
+	height: 40px;
+}
+.car-title  > div:nth-child(2) span.half{
+	display:block;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.car-title  > div:nth-child(2) span.half:last-child , .car-goods-msg > div:last-child{
+	text-align: center;
+}
+.car-title  > div:nth-child(2), .item-single > div:nth-child(2){
+	width: 38%;
+	text-align: left;
+	padding-left: 1%;
+}
+.car-title  > div:nth-child(1), .item-single > div:nth-child(1){
+	text-align: left;
+	padding-left: 1%;
+}
+input[type="checkbox"]{
+	vertical-align: middle;
+	margin: -2px 5px 0;
+}
+.check-box > input{
+	margin: 0;
+	width: 20%;
+	margin-right: 2%;
+	float: left;
+}
+.check-box > div{
+	float: left;
+	width: 76%;
+	height:0;
+	padding-bottom: 64.6%;
+	overflow: hidden;
+}
+.check-box > div >img{
+	width: 100%;
+	border: 1px solid #eee;
+}
+.item-single{
+	padding: 15px 0 10px;
+	overflow: hidden;
+	border-bottom: 1px solid #e7e7e7;
+}
+.item-single:last-child{
+	border: none;
+}
+.car-goods-msg{
+	overflow: hidden;
+}
+.car-goods-msg > div{
+	width: 50%;
+	float: left;
+	line-height: 22px;
+}
+.car-goods-msg h4{
+	color: #000;
+	font-weight: 200;
+	font-size: 14px;
+	margin-top: 3px;
+}
+.car-goods-msg p{
+	color: #999;
+}
+.numbers{
+	overflow: hidden;
+	display: inline-block;
+}
+ .numbers >span{
+	display: block;
+	float: left;
+	border: 1px solid #a6a6a6;
+ 	height: 30px;
+ 	line-height: 20px;
+ 	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.numbers >span:nth-child(1), .numbers >span:nth-child(3){
+	padding:  5px;
+	cursor: pointer;
+}
+.numbers >span:nth-child(2){
+	padding: 5px 10px;
+	border-width: 1px 0;
+}
+.total-div, #total-price{
+	color: #d23e3e;
+	font-weight: bold;
+}
+.handle p{
+	line-height: 20px;
+	cursor: pointer;
+	font-size: 12px;
+}
+.handle p:hover{
+	color: #bc9334;
+}
+.fixed-bottom{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 1000;
+	left:0;
+}
+.cart-toolbar.fixed-bottom{
+	padding:0;
+}
+.cart-toolbar {
+	height: 60px;
+	line-height: 60px;
+	margin-top: 30px;
+	background: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	padding: 0 0 0 15px;
+}
+.cart-toolbar .to-add-container > div{
+	margin: 0 10px;
+}
+.cart-toolbar .to-add-container > div.fl{
+	cursor: pointer;
+}
+ div.settle{
+	margin-right:0 !important;
+	width: 110px;
+	height: 100%;
+	background: #b3d1eb;
+	text-align: center;
+	font-size: 16px;
+}
+ div.settle a{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.settle:hover, .settle a:hover{
+	background: #6e91af;
+	color: #f5f5f5;
+}
+
+.order .car-title{
+	background: none;
+	border-bottom: 1px solid #e7e7e7
+}
+.order .check-box > div{
+	width: 82%;
+	padding-bottom: 70%;
+}
+.pay-amount{
+	width: 100%;
+	padding:  20px;
+	text-align: right;
+	border: 1px solid #e7e7e7;
+}
+.pay-amount p{
+}
+.pay-amount p:nth-child(-n+2){
+	font-size: 12px;
+	line-height: 2em;
+}
+.pay-amount p:last-child{
+	margin-top: 20px;
+}
+span.amount{
+	font-size: 20px;
+	font-weight: bold;
+	color: #d23e3e
+}
+.submit-p{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background:#f5f5f5;
+	color: #999;
+	text-align: right;
+	border: 1px solid #e7e7e7;
+	border-width: 0 1px 1px 1px;
+}
+.submit-p span{
+	margin-right: 20px;
+}
+.addAd-bg{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,0.1);
+	z-index: 1000;
+	display: none;
+}
+.addAd-box{
+	position: fixed;
+	width: 50vw;
+	height: auto;
+	background: #fff;
+	top: 20vh;
+	left: 25vw;
+	
+}
+.addAd-box p, .addAd-box > div label{
+	font-family:"SimHei";
+}
+.addAd-box > p{
+	width: 100%;
+	height: 50px;
+	line-height: 30px;
+	background: #f5f5f5;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #000;
+	position: relative;
+}
+.addAd-box > p span{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	top:0;
+	right:0;
+}
+.addAd-box > div{
+	width: 100%;
+	height: auto;
+	padding: 20px 30px
+}
+.addAd-box > div label{
+	font-weight: normal;
+	display: inline-block;
+	width: 5em;
+	text-align: right;
+	color: #666;
+	
+}
+.addAd-box > div >p{
+	margin: 10px 0;
+}
+.addAd-box input, .addAd-box select{
+	border: 1px solid #c6c6c6;
+	height: 30px;
+}
+.addAd-box input{
+	width: 210px;
+	padding-left: 10px;
+}
+.addAd-box select{
+	width: 80px;
+	outline: none;
+}
+.addAd-box .keep-ad{
+	padding-left: 5em;
+}
+#keep-ad{
+	margin-left: 5px;
+	border: none;
+	background: #b3d1eb;
+	padding: 8px 15px;
+	margin-top: 10px;
+}
+#keep-ad:hover{
+	background: #6e91af;
+	color: #f5f5f5;
+}

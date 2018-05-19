@@ -1,0 +1,84 @@
+<!DOCTYPE html >
+<html >
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        
+<html>
+    <head>
+        <title>注册页面</title>
+        <link href="注册_files/css/register.css" type="text/css" rel="stylesheet">
+        <link href="注册_files/css/global.css" type="text/css" rel="stylesheet">
+        <script>
+   function show(){
+    var user=document.getElementById("uname").value;
+	var password=document.getElementById("password").value;
+	var sex=document.getElementsByName("sex");
+	for(var i=0;i<sex.length;i++){
+	         if(sex[i].checked==true){
+	               var con=sex[i].value;
+	               document.write("您的性别是 ："+con); document.write('<br />')
+	           }
+	       }
+    document.write("您的用户名是："+user); document.write('<br />')
+    document.write("您的密码是："+password); document.write('<br />')
+	}
+        </script>
+    </head>
+    <body>
+        <div id="layout">
+            <span class="title">个人注册</span>
+            <form name="myform" onsubmit="return test()"  >
+            <ul>
+                <li><i class="un"><img src="注册_files/images/user_name.png"></i><input class="username" type="text" placeholder="请输入用户名" id="uname" name="username"/></li>
+                <li><i class="pw"><img src="注册_files/images/pwd.png"></i><input class="pwd" type="password" placeholder="请输入密码"id="password" name="password" /></li>
+                <li><i class="pw2"><img src="注册_files/images/pwd.png"></i><input class="pwd2" type="password" placeholder="请输入确认密码"id="passwd" /></li>
+                 <li class="sex">性别：<input type="radio" name="sex" id="man" /> 男  <input type="radio" id="woman" name="sex"/>女</li>
+                 <li class="em">邮箱：<input type="text"name="email"></li>
+                 <li class="xueli">教育水平：<select name="jysp" >
+                      <option value="中专">中专</option>
+                      <option value="大专">大专</option>
+                      <option value="本科" selected>本科</option>
+                      <option value="研究生">研究生</option>
+                      </select>
+               </li>
+                 <li class="habit">兴趣：<input type="checkbox" /> 听歌 <input type="checkbox" /> 看电影<input type="checkbox" /> 学习</li>
+                 <li><div class="queren"><input class="fx" type="checkbox" checked="checked" /><p>我已阅读并同意《用户协议》</p></div></li>
+                <li><button class="submit" type="submit" >注册</button></li>
+                <li> <input type="button" value="显示表单信息" id="print" onclick="show()"/></li>
+           </ul>
+            </form>
+        </div>
+        <script>
+        	    var a=document.getElementById("password");
+        	    var b=document.getElementById("passwd");
+        	    var c=document.getElementById("uname");
+        	    
+        	function test(){
+        	var d = document.getElementsByName("sex");
+        		if(uname.value==""||password.value==""){
+			          alert("用户名或密码不能为空！");   
+			    }
+                if(uname.value.length>=12){
+			        alert("用户名不能超过12个字符！");
+			        c.style.border="2px solid red";
+			    }
+                if(password.value.length>=8){
+			        alert("密码不能超过12个字符！");
+			        a.style.border="2px solid red";
+			    }
+        		if(password.value!=passwd.value){
+        			alert("请输入相同的密码");
+        			a.style.border="2px solid red";
+        			b.style.border="2px solid red";
+        		}
+                for(var i=0;i<d.length;i++){
+                    if(d[i].checked==true){
+                       return true;
+                    }
+                   }
+                    alert("请选择性别");
+                    return false;
+                   }
+        </script>
+    </body>
+</html>
